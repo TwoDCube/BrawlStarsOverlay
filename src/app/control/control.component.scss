@@ -1,1 +1,18 @@
+:host {
+  width: 450px;
+  margin: 100px auto;
+  padding: 48px 40px 36px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  display: block;
+}
 
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.checkbox {
+  grid-column: span 2;
+}

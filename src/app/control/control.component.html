@@ -1,18 +1,29 @@
 <form [formGroup]="fg">
-
-<mat-checkbox formControlName="show"></mat-checkbox>
-<mat-select formControlName="team1">
-  <mat-option *ngFor="let team of teams | async" [value]="team.name"> {{team.name}} </mat-option>
-</mat-select>
-<mat-select formControlName="score1">
-  <mat-option value="0">0</mat-option>
-  <mat-option value="1">1</mat-option>
-</mat-select>
-<mat-select formControlName="score2">
-  <mat-option value="0">0</mat-option>
-  <mat-option value="1">1</mat-option>
-</mat-select>
-<mat-select formControlName="team2">
-  <mat-option *ngFor="let team of teams | async" [value]="team.name"> {{team.name}} </mat-option>
-</mat-select>
+<mat-checkbox formControlName="show" class="checkbox">Látható?</mat-checkbox>
+<mat-form-field>
+  <mat-label>Csapat 1</mat-label>
+  <mat-select formControlName="team1">
+    <mat-option *ngFor="let team of teams | async" [value]="team.name"> {{team.name}} </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Pont 1</mat-label>
+  <mat-select formControlName="score1">
+    <mat-option value="0">0</mat-option>
+    <mat-option value="1">1</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Csapat 2</mat-label>
+  <mat-select formControlName="team2">
+    <mat-option *ngFor="let team of teams | async" [value]="team.name"> {{team.name}} </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Pont 2</mat-label>
+  <mat-select formControlName="score2">
+    <mat-option value="0">0</mat-option>
+    <mat-option value="1">1</mat-option>
+  </mat-select>
+</mat-form-field>
 </form>
