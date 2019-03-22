@@ -2,12 +2,12 @@
 
 $blue: #2070ff;
 $red: #f24424;
-$blue-box-shadow: inset 0px -4px 0px 1px darken($blue, 10%), inset 0px 4px 0px 0px lighten($blue, 10%);
-$red-box-shadow: inset 0px -4px 0px 1px darken($red, 10%), inset 0px 4px 0px 0px lighten($red, 10%);
+$blue-box-shadow: inset 0px -4px 0px 1px darken($blue, 12%), inset 0px 4px 0px 0px lighten($blue, 10%);
+$red-box-shadow: inset 0px -4px 0px 1px darken($red, 12%), inset 0px 4px 0px 0px lighten($red, 10%);
 
 :host {
   position: absolute;
-  bottom: 32px;
+  bottom: 15px;
   left: 0;
   right: 0;
 }
@@ -31,16 +31,16 @@ $red-box-shadow: inset 0px -4px 0px 1px darken($red, 10%), inset 0px 4px 0px 0px
   font-size: 25px;
   &.blue {
     background-color: $blue;
-    border-left-width: 1px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-right-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     box-shadow: $blue-box-shadow;
   }
   &.red {
     background-color: $red;
-    border-right-width: 0px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-left-width: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     box-shadow: $red-box-shadow;
   }
 }
@@ -55,20 +55,20 @@ $red-box-shadow: inset 0px -4px 0px 1px darken($red, 10%), inset 0px 4px 0px 0px
   border-bottom-width: 2px;
   &.blue {
     background-color: $blue;
-    border-left-width: 0;
-    padding-left: 10px;
-    text-align: left;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: $blue-box-shadow;
-  }
-  &.red {
-    background-color: $red;
     border-right-width: 0;
     padding-right: 10px;
     text-align: right;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    box-shadow: $blue-box-shadow;
+  }
+  &.red {
+    background-color: $red;
+    border-left-width: 0;
+    padding-left: 10px;
+    text-align: left;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     box-shadow: $red-box-shadow;
   }
 }
