@@ -1,15 +1,15 @@
-<div class="scoreboard">
+<div class="scoreboard" *ngIf="info | async as infoc" [hidden]="infoc?.show">
   <div class="team-name blue">
-    Négyjegyű függvénytábla
+    {{ infoc?.team1}}
   </div>
   <div class="score blue">
-    0
+    {{ infoc?.score1 }}
   </div>
   <div class="score red">
-    1
+    {{ infoc?.score2 }}
   </div>
   <div class="team-name red">
-    Teamname red
+    {{ infoc?.team2 }}
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-board',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
+  info;
+
+  constructor(private afStore: AngularFirestore) { }
 
   ngOnInit() {
+    this.info = this.afStore.collection('info').doc('scores').valueChanges()
   }
 
 }
