@@ -1,4 +1,4 @@
-<div class="scoreboard" *ngIf="info | async as infoc" [hidden]="infoc?.show">
+<div class="scoreboard" *ngIf="info | async as infoc" [style.display]="(!infoc?.show) ? 'none' : 'grid'">
   <div class="team-name blue">
     {{ infoc?.team1}}
   </div>
